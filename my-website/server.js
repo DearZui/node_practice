@@ -1,3 +1,4 @@
+var connect = require('connect');
 var server = connect.createServer();
 
 server.use(connect.static(__dirname + '/website'));
@@ -6,7 +7,7 @@ server.use(function (req, res, next) {
     next();
 });
 
-server.user(function (req, res, next) {
+server.use(function (req, res, next) {
     if ('GET' == req.method && '/images' == req.url.substr(0, 7)) {
         
     } else {
