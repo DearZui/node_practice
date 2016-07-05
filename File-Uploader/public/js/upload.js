@@ -19,7 +19,7 @@ $('#upload-input').on('change', function() {
 			url: '/upload',
 			type: 'POST',
 			data: formData,
-			progressData: false,
+			processData: false,
 			contentType: false,
 			success: function(data) {
 				console.log('upload successful!\n' + data);
