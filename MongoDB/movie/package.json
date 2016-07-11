@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "underscore": "^1.8.3"
-  }
+  },
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "moviedoubanm",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "chen",
+  "license": "MIT"
 }

@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost/doubanmovie');
 app.set('views', './views/pages');
 app.set('view engine', 'jade');
 app.use(require('body-parser').urlencoded({extended: true}));
-app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.listen(port);
 
 console.log('Server listening on port 3000');
@@ -61,7 +61,7 @@ app.get('/admin/movie', function(req, res) {
 })
 
 // admin update movie 
-app.get('/admin/update/:id', function(res, req) {
+app.get('/admin/update/:id', function(req, res) {
 	var id = req.params.id;
 
 	if (id) {
@@ -129,4 +129,19 @@ app.get('/admin/list', function(req, res) {
 			movies: movies
 		})
 	})
+});
+
+// list delete movie
+app.delete('/admin/list', function(req, res) {
+	var id = req.query.id;
+
+	if (id) {
+		Movie.remove({_id: id}, function(err, movie) {
+			if (err) {
+				console.log(err)
+			} else {
+				res.json({success: 1})
+			}
+		});
+	}
 })
