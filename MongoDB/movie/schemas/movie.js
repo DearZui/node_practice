@@ -19,7 +19,7 @@ var MovieSchema = new mongoose.Schema({
 			default: Date.now()
 		}
 	}
-})
+});
 
 MovieSchema.pre('save', function(next) {
 	if (this.isNew) {
@@ -27,20 +27,21 @@ MovieSchema.pre('save', function(next) {
 	} else {
 		this.updateAt = Data.now();
 	}
-})
+	next();
+});
 
 MovieSchema.statics = {
 	fetch: function(cb) {
 		return this
 			.find({})
 			.sort('meta.updateAt')
-			exec(cb)
+			.exec(cb);
 	},
 	findById: function(id, cb) {
 		return this
 			.findOne({_id: id})
-			exec(cb)
+			.exec(cb);
 	}
-}
+};
 
 module.exports = MovieSchema;
