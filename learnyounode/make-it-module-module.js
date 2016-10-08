@@ -1,4 +1,4 @@
-const fs = require('fs');
+/*const fs = require('fs');
 const path = require('path');
 
 module.exports = function (dir, ext, callback) {
@@ -11,4 +11,19 @@ module.exports = function (dir, ext, callback) {
 
 		callback(null, list)
 	 })
+}*/
+
+const fs = require('fs');
+const path = require('path');
+
+module.exports = (dir, ext, callback) => {
+	fs.readdir(dir, (err, list) => {
+		if(err) return callback(err);
+
+		list = list.filter(value => {
+			return path.extname(value) === ('.' + ext);
+		})
+
+		callback(null, list)
+	})
 }

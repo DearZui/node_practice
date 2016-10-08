@@ -1,7 +1,7 @@
-var fs = require('fs');
+const fs = require('fs');
 
-var bf = fs.readFileSync(process.argv[2].toString());
-var str = bf.toString();
-var arr = str.split('\n');
+const path = process.argv[2];
+const buffer = fs.readFileSync(path);
+const str = buffer.toString();
 
-console.log(arr.length - 1);
+console.log(str.split('\n').length - 1);

@@ -1,13 +1,13 @@
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var post = process.argv[3];
+let extname = process.argv[3];
 
-fs.readdir(process.argv[2], function(err, list) {
-	var newArr = list.filter(function(value) {
-		return path.extname(value) === ('.' + post);
+fs.readdir(process.argv[2], (err, files) => {
+	let newArr = files.filter((value) => {
+		return path.extname(value) === '.' + extname;
 	});
-	newArr.map(function (item) {
-		console.log(item);
+	newArr.map((value) => {
+		console.log(value);
 	})
 })
