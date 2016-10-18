@@ -1,4 +1,4 @@
-'use strick';
+'use strict';
 
 var http = require('http'),
 	https = require('https'),
@@ -38,7 +38,7 @@ function spiderMovie (index) {
 				}
 				downloadImg('../img/', movie.picUrl);
 			});
-			saveData('./data' + (index / pageSize) + '.json', movies);
+			saveData('./data/data' + (index / pageSize) + '.json', movies);
 		});
 	}).on('error', function (err) {
 		console.log(err);

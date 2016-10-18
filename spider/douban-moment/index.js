@@ -59,7 +59,7 @@ function downloadImg(imgDir, url) {
     }).on('error', function (err) {
         console.log(err);
     });
-} ﻿​
+}
 
 function* doSpider(x) {
 	var start = 141502;
