@@ -11,8 +11,8 @@ const opt = {
 	port: 80
 };
 
-function spiderConf () {
-	http.get('http://meeting.sciencenet.cn/index.php?s=%2FCategory%2Fallmt&allid=1&p=1', function (res) {
+function spiderConf (index) {
+	http.get('http://meeting.sciencenet.cn/index.php?s=%2FCategory%2Fallmt&allid=1&p=' + index, function (res) {
 		var html = '';
 		var s_confs = [];
 		var date = new Date();
@@ -27,15 +27,16 @@ function spiderConf () {
 			x.map((e)=>{
 				if(e === 0) return;
 				var confUrl = {
+					m_title: x.eq(e).children("td").eq(1).children("a").text().split("\t").pop().split("  ").shift(),
 					m_url : x.eq(e).children("td").eq(1).children("a").attr("href"),
-					m_location: x.eq(e).children("td").eq(3).children("span").text().split("\t").pop().split(" ").shift(),
+					m_location: x.eq(e).children("td").eq(3).children("span").text().split("\t").pop().split("  ").shift(),
 					m_time: x.eq(e).children("td").eq(5).text().split(" ").join("").split("\n")[1],
 				};
 				if(confUrl) {
 					s_confs.push(confUrl);
 				}
 			});
-			saveData('./data' + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + '.json', s_confs);
+			saveData('./data/data' + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + "-" + index +'.json', s_confs);
 		});
 	}).on('error', (err) => {
 		console.log(err);
@@ -52,4 +53,15 @@ function saveData(path, confs) {
 	});
 }
 
-spiderConf();
+function* doSpider(x) {
+	var start = 1;
+	while(start < x) {
+		yield start;
+		spiderConf(start);
+		start ++;
+	}
+}
+
+for (var x of doSpider(10)) {
+	console.log(x);
+}
