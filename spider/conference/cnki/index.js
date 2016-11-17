@@ -32,9 +32,11 @@ function spiderConf () {
 					m_time : x.eq(e).children("td").eq(2).text(),
 					m_unit : x.eq(e).children("td").eq(3).text()
 				};
+				confUrl.m_url = url_handler(confUrl.m_url);
+				var url_arr = getDetailUrls(confUrl.m_url);
+				console.log(url_arr[2]);
 				if(confUrl) {
 					s_confs.push(confUrl);
-					console.log(confUrl);
 				}
 			});
 			saveData('./data' + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + '.json', s_confs);
@@ -45,13 +47,28 @@ function spiderConf () {
 }
 
 function saveData(path, confs) {
-	console.log(confs);
 	fs.writeFile(path, JSON.stringify(confs, null, ' '), (err)=>{
 		if (err) {
 			return console.log(err);
 		}
 		console.log('Data saved');
 	});
+}
+
+function url_handler(str) {
+	return "http://conf.cnki.net/" + str;
+}
+
+function getDetailUrls(url) {
+	let id = url.split("=")[1];
+	let url_arr = [];
+	url_arr[0] = url;
+	url_arr[1] = "http://conf.cnki.net/WebSite/ImportDate.aspx?conferenceID=" + id;
+	url_arr[2] = "http://conf.cnki.net/WebSite/callForConference.aspx?conferenceID=" + id;
+	url_arr[3] = "http://conf.cnki.net/WebSite/VenueHotelTraffic.aspx?conferenceID=" + id;
+	url_arr[4] = "";
+	url_arr[5] = "http://conf.cnki.net/HistoryConference.aspx" + id;
+	return url_arr;
 }
 
 spiderConf();
