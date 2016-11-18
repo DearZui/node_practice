@@ -35,6 +35,8 @@ function spiderConf () {
 				confUrl.m_url = url_handler(confUrl.m_url);
 				var url_arr = getDetailUrls(confUrl.m_url);
 				console.log(url_arr[2]);
+				getDetailUrls(url_arr[2]);
+
 				if(confUrl) {
 					s_confs.push(confUrl);
 				}
@@ -67,8 +69,26 @@ function getDetailUrls(url) {
 	url_arr[2] = "http://conf.cnki.net/WebSite/callForConference.aspx?conferenceID=" + id;
 	url_arr[3] = "http://conf.cnki.net/WebSite/VenueHotelTraffic.aspx?conferenceID=" + id;
 	url_arr[4] = "";
-	url_arr[5] = "http://conf.cnki.net/HistoryConference.aspx" + id;
+	url_arr[5] = "http://conf.cnki.net/WebSite/HistoryConference.aspx" + id;
 	return url_arr;
+}
+
+function getDetails(url) {
+	http.get(url, function(res) {
+		let html = '';
+		let data = '';
+		res.setEncoding('utf-8');
+		res.on('data', function (chunk) {
+			html += chunk;
+		});
+		res.on('end', ()=> {
+			let $ = cheerio.load(html);
+			data = $('#callLabel').text();
+			console.log(data);
+		})
+	}).on('error', (err) => {
+		console.log(err);
+	})
 }
 
 spiderConf();

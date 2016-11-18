@@ -6,5 +6,5 @@ export funtion getDetailUlrs(url) {
 	url_arr[2] = "http://conf.cnki.net/WebSite/callForConference.aspx?conferenceID=" + url;
 	url_arr[3] = "http://conf.cnki.net/WebSite/VenueHotelTraffic.aspx?conferenceID=" + url;
 	url_arr[4] = "";
-	url_arr[5] = "http://conf.cnki.net/HistoryConference.aspx" + url;
+	url_arr[5] = "http://conf.cnki.net/WebSite/HistoryConference.aspx" + url;
 }
