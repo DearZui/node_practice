@@ -11,6 +11,8 @@ const opt = {
 	port: 80
 };
 
+var value;
+
 function spiderConf () {
 	http.get('http://conf.cnki.net/index.aspx', function (res) {
 		var html = '';
@@ -34,14 +36,15 @@ function spiderConf () {
 				};
 				confUrl.m_url = url_handler(confUrl.m_url);
 				var url_arr = getDetailUrls(confUrl.m_url);
-				console.log(url_arr[2]);
-				getDetailUrls(url_arr[2]);
-
+				getDetails(confUrl, "Mcontent", url_arr[0], "infoLabel");
+				//confUrl.Msource = getDetails(url_arr[2], "callLabel");
+				//confUrl.Mimportant_time = getDetails(url_arr[1], "DateLabel");
+				//confUrl.Mhistory = getDetails(url_arr[5], "historyLabel");
 				if(confUrl) {
 					s_confs.push(confUrl);
 				}
 			});
-			saveData('./data' + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + '.json', s_confs);
+			saveData('./data/' + date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() + '.json', s_confs);
 		});
 	}).on('error', (err) => {
 		console.log(err);
@@ -73,22 +76,23 @@ function getDetailUrls(url) {
 	return url_arr;
 }
 
-function getDetails(url) {
+function getDetails(obj, attr, url, contentId) {
 	http.get(url, function(res) {
 		let html = '';
 		let data = '';
 		res.setEncoding('utf-8');
 		res.on('data', function (chunk) {
 			html += chunk;
+			let $ = cheerio.load(html);
+			data = $('#' + contentId).text();
 		});
 		res.on('end', ()=> {
-			let $ = cheerio.load(html);
-			data = $('#callLabel').text();
-			console.log(data);
-		})
+			obj[attr] = data;
+			console.log(obj[attr]);
+		});
 	}).on('error', (err) => {
 		console.log(err);
-	})
+	});
 }
 
 spiderConf();
