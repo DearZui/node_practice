@@ -1,0 +1,318 @@
+[33mcommit 9561ec06819c80c5339f5b274ae2f4898fb31547[m
+Author: DearZui <673008724@163.com>
+Date:   Fri Dec 30 22:19:41 2016 +0800
+
+    mongo
+
+[33mcommit c7802de9dc36d1e5bf7b51006f2b51cce64674ca[m
+Author: DearZui <673008724@163.com>
+Date:   Fri Dec 30 22:11:07 2016 +0800
+
+    mongo
+
+[33mcommit 7a7e89fcba10bc4f76179de72a585cd60978d4c1[m
+Author: DearZui <673008724@163.com>
+Date:   Fri Dec 30 08:27:46 2016 +0800
+
+    long time since last update
+
+[33mcommit 50aa2bfe5840ea8c7ed19b22a2a7c65636a87ce2[m
+Author: DearZui <673008724@163.com>
+Date:   Thu Dec 8 22:07:34 2016 +0800
+
+    job-weekly
+
+[33mcommit 82daf773f27a02e8994de2899cef30486dc377e4[m
+Author: DearZui <673008724@163.com>
+Date:   Thu Dec 8 21:45:42 2016 +0800
+
+    events demo
+
+[33mcommit f20f238c37fc96fc0b8ef170ff98b922b79db6da[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Nov 30 17:51:13 2016 +0800
+
+    global&process
+
+[33mcommit ff5bc5e952447803cba322a2771c52c4ebefd067[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Nov 29 14:22:58 2016 +0800
+
+    non-blocking
+
+[33mcommit b01a96e871387f3fd96b1b706efcd7883ab3d2ed[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Nov 29 12:20:14 2016 +0800
+
+    blocking demo
+
+[33mcommit 74c102f11ebf513297459051f9d2ac12a22ecee2[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Nov 22 21:45:33 2016 +0800
+
+    Got the data logged.
+
+[33mcommit 75beaf32cfdb4434b3c3d5b3bed52c0ccc026f33[m
+Author: DearZui <673008724@163.com>
+Date:   Fri Nov 18 20:39:55 2016 +0800
+
+    get details
+
+[33mcommit 510432f85cea097b8781292d869b4672923d66ff[m
+Author: DearZui <673008724@163.com>
+Date:   Thu Nov 17 21:32:54 2016 +0800
+
+    delete useless log && save detail urls
+
+[33mcommit ebd7d1357f4b77cf7f52b1d52f809fea66611f94[m
+Author: DearZui <673008724@163.com>
+Date:   Sat Nov 5 15:19:44 2016 +0800
+
+    multiple pages
+
+[33mcommit 8b76912ad9c879335bc85c252d7525e138ef150a[m
+Author: DearZui <673008724@163.com>
+Date:   Fri Nov 4 16:09:44 2016 +0800
+
+    sciencenet
+
+[33mcommit b0243c17f21c75837b1f282cb0e4feadd6899103[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Oct 18 17:55:59 2016 +0800
+
+    update
+
+[33mcommit 3f8dfb55e397a66f2d3c826580c497ff44e9c901[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Oct 18 17:55:23 2016 +0800
+
+    ignore json
+
+[33mcommit d02c341cd3bc6ea855d4dd3c26575b5e6d55ffe7[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Oct 18 17:52:36 2016 +0800
+
+    ignore json
+
+[33mcommit 7c8a9413cfb55a122b4f1339441a5e134f8bb846[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Oct 18 17:51:33 2016 +0800
+
+    remove all
+
+[33mcommit 6f9b4c7cbc086d6c1282b0709b1f6c3e5db40616[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Oct 18 17:42:50 2016 +0800
+
+    conf spider url get
+
+[33mcommit 12e643adfb0b505af8778c0280c407242f698cce[m
+Author: DearZui <673008724@163.com>
+Date:   Sat Oct 8 21:44:01 2016 +0800
+
+    update
+
+[33mcommit 61b915ac9c26d5a44f0ae6eb4e8011be780099f4[m
+Author: dearzui <673008724@163.com>
+Date:   Wed Aug 24 17:35:31 2016 +0800
+
+    http-collect
+
+[33mcommit d667edb96aad781884caca4d2ea72642bac5141b[m
+Author: dearzui <673008724@163.com>
+Date:   Wed Aug 24 16:48:56 2016 +0800
+
+    http-client
+
+[33mcommit bb83065527fc4dfd6029c14e1f2bb382d7ec0504[m
+Author: dearzui <673008724@163.com>
+Date:   Wed Aug 24 16:46:38 2016 +0800
+
+    make it module
+
+[33mcommit d64678efb7120383bbfd433ea49013a554eef93f[m
+Author: dearzui <673008724@163.com>
+Date:   Wed Aug 24 14:08:27 2016 +0800
+
+    learnyounode filterd-ls
+
+[33mcommit bf512c75fc0dcbd615921b7a45e59a18849b83eb[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Aug 24 00:36:29 2016 +0800
+
+    my-first-async-io
+
+[33mcommit 68c4a4640d98d3116e54a77280eeeaa1b2a993c8[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Aug 24 00:26:56 2016 +0800
+
+    my-first-io
+
+[33mcommit 165eb4515b40660b1379d67a76a52fc7ec1bf380[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Aug 24 00:17:14 2016 +0800
+
+    node start&baby-step
+
+[33mcommit a6d32b278ca097e740b294504a2f42ab9d288521[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Aug 24 00:16:17 2016 +0800
+
+    Remove submodule entry
+
+[33mcommit 70b1046ab208ac8fe9e6125e24ea837ef3e36da8[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Aug 24 00:10:43 2016 +0800
+
+    learnyounode start&baby-step
+
+[33mcommit 4a76bb467b2dcaf1d551a261132173ea3b06f3d0[m
+Author: DearZui <673008724@163.com>
+Date:   Mon Aug 22 21:51:44 2016 +0800
+
+    Remove submodule entry
+
+[33mcommit 27741aafd827bb2bb5bfa1f4183938a28ec3aacb[m
+Author: dearzui <loebmraz@gmail.com>
+Date:   Mon Aug 8 10:31:54 2016 +0800
+
+    spider-moment-somefunc
+
+[33mcommit d2557ec44126a49705a2fe8674e5f814a5664f51[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Aug 3 05:08:52 2016 +0800
+
+    spider douban-moment
+
+[33mcommit 41f7121f0be0193489150d9fe7ee4d66832526fb[m
+Author: DearZui <673008724@163.com>
+Date:   Mon Jul 11 22:11:40 2016 +0800
+
+    finised
+
+[33mcommit 23c110b1519bf2aadf8c69ed02410b040c88bdd0[m
+Author: DearZui <673008724@163.com>
+Date:   Mon Jul 11 20:04:25 2016 +0800
+
+    package.json
+
+[33mcommit 5769b2b00db49bb7a42788a79f3017f0b655910f[m
+Author: dearzui <673008724@163.com>
+Date:   Mon Jul 11 19:17:22 2016 +0800
+
+    data design
+
+[33mcommit a2437216675261cffa900df8013461f1bea32235[m
+Author: dearzui <673008724@163.com>
+Date:   Mon Jul 11 16:39:36 2016 +0800
+
+    schema added
+
+[33mcommit 42df587d594f58a9542fcaf2b83a5a8fe4a26336[m
+Author: DearZui <673008724@163.com>
+Date:   Mon Jul 11 00:28:31 2016 +0800
+
+    update app & add test data
+
+[33mcommit 5a005faea531c3bfd5af62910c88c6f5dbc2f726[m
+Author: DearZui <673008724@163.com>
+Date:   Sun Jul 10 22:48:34 2016 +0800
+
+    moviesite
+
+[33mcommit 4389cf980ffe045f8b2b59e87c4e51d4c5e33ecd[m
+Author: DearZui <673008724@163.com>
+Date:   Tue Jul 5 22:49:20 2016 +0800
+
+    finished"
+
+[33mcommit a0bcee9a1f11bae56549132f6f061cb28772a6e7[m
+Author: dearzui <673008724@163.com>
+Date:   Tue Jul 5 12:28:40 2016 +0800
+
+    update
+
+[33mcommit 2bf81fd9585267403d2b7a144e87ad7c8d6c1517[m
+Merge: e14a99f 718eb08
+Author: dearzui <673008724@163.com>
+Date:   Mon Jul 4 19:15:20 2016 +0800
+
+    Merge branch 'master' of https://github.com/DearZui/node_practice
+
+[33mcommit e14a99f6df2643390089f488f1f9fa2b60a6f1a7[m
+Author: dearzui <673008724@163.com>
+Date:   Mon Jul 4 19:14:54 2016 +0800
+
+    file uploader
+
+[33mcommit 718eb086853d4b26853d1bf727045c6e16e474ce[m
+Author: DearZui <673008724@163.com>
+Date:   Wed Jun 1 20:45:49 2016 +0800
+
+    electron
+
+[33mcommit 4353ac685ed7e093c15923e49f3cb3f6694dc67b[m
+Author: DearZui <673008724@163.com>
+Date:   Tue May 31 23:48:25 2016 +0800
+
+    mongodb
+
+[33mcommit 6d970c8b5bdcb7d11f2b5c2b55172a5ff2b64d10[m
+Merge: a019180 a0fbc76
+Author: DearZui <673008724@163.com>
+Date:   Tue May 31 22:44:10 2016 +0800
+
+    Merge branch 'master' of https://github.com/DearZui/node_practice
+
+[33mcommit a019180d507a8ee14a815987ad8e8fc140a78b93[m
+Author: DearZui <673008724@163.com>
+Date:   Tue May 31 22:43:20 2016 +0800
+
+    node+mongo
+
+[33mcommit 4c7571110ca74aca20f4fabcfa3509f82e3b92b3[m
+Author: DearZui <673008724@163.com>
+Date:   Tue May 31 22:20:36 2016 +0800
+
+    remove the useless
+
+[33mcommit a0fbc7687f88b0bd9be0bea5b50ee6f630635fb3[m
+Author: dearzui <673008724@163.com>
+Date:   Tue May 31 19:19:50 2016 +0800
+
+    node+mongo
+
+[33mcommit 5829d42dcb1c9605f44e84bda6dee4d9a2e38499[m
+Author: dearzui <673008724@163.com>
+Date:   Tue May 31 17:35:22 2016 +0800
+
+    mongodb
+
+[33mcommit 6b41df519c0f1ba73ac680a6cdca5d479e0d47f6[m
+Author: DearZui <673008724@163.com>
+Date:   Tue May 31 00:01:27 2016 +0800
+
+    remove node_modules dir
+
+[33mcommit fd6f54bb6fdab7221e2401e85cd83261464ec461[m
+Author: DearZui <673008724@163.com>
+Date:   Mon May 30 23:59:52 2016 +0800
+
+    delete moudle dir
+
+[33mcommit c7067c3f965249c9f86f53d5c3c3eef02f30e28a[m
+Author: DearZui <673008724@163.com>
+Date:   Mon May 30 23:56:36 2016 +0800
+
+    delete module dir
+
+[33mcommit 72719de7e08526baad2bc960cc02001964c04614[m
+Author: DearZui <673008724@163.com>
+Date:   Sun May 29 19:30:33 2016 +0800
+
+    spider douban
+
+[33mcommit cba7d1c30e6642fbfa3d7b501b8f012ef347819c[m
+Merge: 09a0dc2 7ca7851
+Author: DearZui <673008724@163.com>
+Date:   Sun May 29 17:05:1
