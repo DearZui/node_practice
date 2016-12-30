@@ -76,23 +76,23 @@ function getDetailUrls(url) {
 	return url_arr;
 }
 
-function getDetails(obj, attr, url, contentId) {
-	http.get(url, function(res) {
-		let html = '';
-		let data = '';
-		res.setEncoding('utf-8');
-		res.on('data', function (chunk) {
-			html += chunk;
-			let $ = cheerio.load(html);
-			data = $('#' + contentId).text();
-		});
-		res.on('end', ()=> {
-			obj[attr] = data;
-			console.log(obj[attr]);
-		});
-	}).on('error', (err) => {
-		console.log(err);
-	});
-}
+// function getDetails(obj, attr, url, contentId) {
+// 	http.get(url, function(res) {
+// 		let html = '';
+// 		let data = '';
+// 		res.setEncoding('utf-8');
+// 		res.on('data', function (chunk) {
+// 			html += chunk;
+// 			let $ = cheerio.load(html);
+// 			data = $('#' + contentId).text();
+// 		});
+// 		res.on('end', ()=> {
+// 			obj[attr] = data;
+// 			console.log(obj[attr]);
+// 		});
+// 	}).on('error', (err) => {
+// 		console.log(err);
+// 	});
+// }
 
 spiderConf();
