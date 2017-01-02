@@ -42,6 +42,17 @@ function spiderConf (index) {
 				}
 			});
 			console.log(s_confs);
+			MongoClient.connect(url, function(err, db) {
+				assert.equal(null, err);
+				console.log("Connected correctly to database.");
+
+				//Insert
+				db.collection('documents').insertMany(s_confs, function(err, r) {
+					assert.equal(null, err);
+
+					db.close();
+				});
+			});
 			//saveData('./data/data' + date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() + "-" + index +'.json', s_confs);
 		});
 	}).on('error', (err) => {
@@ -70,10 +81,4 @@ function* doSpider(x) {
 
 for (var x of doSpider(10)) {
 	console.log(x);
-}
-
-
-var insertDocuments = function(db, documents, callback) {
-	var collection = db.collection('documents');
-	collection.insertMany
 }
