@@ -36,7 +36,7 @@ function spiderConf (index) {
 					s_confs.push(confUrl);
 				}
 			});
-			saveData('./data/data' + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + "-" + index +'.json', s_confs);
+			saveData('./data/data' + date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() + "-" + index +'.json', s_confs);
 		});
 	}).on('error', (err) => {
 		console.log(err);
