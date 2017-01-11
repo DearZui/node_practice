@@ -24,7 +24,13 @@ function doSpider(index) {
       var $ = cheerio.load(html);
       var x = $("#confList>div[style$='10px;']");
       x.map((e) => {
-        console.log(e);
+        console.log(x.eq(e).children("span").children("a").text())
+        var confUrl = {
+          m_title: x.eq(e).children("span").children("a").text(),
+          m_url: x.eq(e).children("span").children("a").attr("href"),
+          m_location: x.eq(e).children("span").children("i").eq(1).text(),
+          m_time: x.eq(e).children("span").children("i").eq(0).text()
+        }
       })
     })
   })
