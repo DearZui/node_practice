@@ -9,8 +9,8 @@ const opt = {
   port: 80
 };
 
-function doSpider(index) {
-  http.get('http://csp.escience.cn/dct/page/65537/__rpcsp0x2Main!65537%7C0_action/queryByStatus/__rpcsp0x2Main!65537%7C0_pageSize/100/__rpcsp0x2Main!65537%7C0_status/published/__rpcsp0x2Main!65537%7C0_pageNo/' + index, function(res) {
+try {
+	http.get('http://csp.escience.cn/dct/page/65537/__rpcsp0x2Main!65537%7C0_action/queryByStatus/__rpcsp0x2Main!65537%7C0_pageSize/100/__rpcsp0x2Main!65537%7C0_status/published/__rpcsp0x2Main!65537%7C0_pageNo/' + "1", function(res) {
     var html = '';
     var s_confs = [];
 		var date = new Date();
@@ -34,9 +34,11 @@ function doSpider(index) {
           s_confs.push(confUrl);
         }
         console.log(s_confs);
+        //console.err("Can't reach url:http://csp.escience.cn/dct/page/65537/__rpcsp0x2Main!65537%7C0_action/queryByStatus/__rpcsp0x2Main!65537%7C0_pageSize/100/__rpcsp0x2Main!65537%7C0_status/published/__rpcsp0x2Main!65537%7C0_pageNo/1.")
       })
     })
   })
+} catch (e) {
+	console.error(e.message);
+	console.log("Refetching in 10 minutes")
 }
-
-doSpider(1);
